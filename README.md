@@ -1,1 +1,367 @@
+# DREAM BOARDS
+**Dream Boards** is a customizable, open sourced, forum-based web software that utilizes Discord's oAuth2 authentication and developer application features. It's creation is intended for those interested in hosting forum-based RPGs.
 
+Dream Boards utilizes discord developer application feature through a bot dubbed **Dream Bot**. Administrators must have a dedicated discord server for their RPG to allow Dream Boards to properly function.
+
+## INSTRUCTIONS
+
+
+## PAGES
+- Admin
+    - Forum Creation/Editting
+        - Forum Category
+            - Category Order
+            - Category Description
+        - Forum Boards
+            - Forum Board Order
+            - Forum Description
+    - RPG SETTINGS
+        - Universal Outcomes
+            - Critical Success
+            - Success
+            - Failure
+            - Critical Failure
+        - Action Types  
+            - Create 
+                - Name
+        - Individual Actions
+            - Create
+                - Action Type
+                - Name
+        - Character Classes
+            - Create
+        - Stats
+            - Create
+        - Inventory Item Cration / Editting / Deleting
+            - Inventory Item Name
+            - Inventory Item Class: Consumables / Apparel / Weapons / Tools
+            - Inventory Item Description
+            - Inventory Item Buff(s): Effects Character Stats
+            - Inventory Item DeBuff(s): Effects Character Stats
+            - Inventory Item Uses
+            - Inventory Item Spoil Rate (Optional)
+                
+    - Character Editting / Deleting
+        - Faction
+        - Faction Rank
+        - Character Name
+        - Character Avatar
+        - Character Role
+        - Character Appearance
+        - Character Reference
+        - Character Personality
+        - Character History
+        - Character Relationships
+        - Character Stats
+        - Character Inventory
+    - NPC Creation / Editting / Deleting
+        - NPC Name
+        - NPC Avatar
+        - NPC Role
+        - NPC Appearance
+        - NPC Reference
+        - NPC Description
+        - NPC Stats
+        - NPC Inventory
+        - NPC Flee / Defeat Rate
+        - NPC Rewards:
+            - Rewarded inventory items given to characters once an NPC has either fled or been defeated
+    - Faction Creation/Editting
+        - Faction Name
+        - Faction Rank
+            - Faction Rank Name
+            - Faction Rank Description
+        - Faction Description
+    - HTML Templates
+    - CSS Styles
+    
+- User
+    - Create Character
+        - Character Name (Required)
+        - Select Character Class (Required)
+        - Select Character Stats (Required)
+    - Character List
+        - Character
+            - Edit Character Avatar
+            - Edit Character Profile
+            - Edit Character Faction
+
+- Index
+    - Header
+        - Fixed Bar Quick Links / Light + Dark Toggle / Menu Toggle for ACP/UCP
+        - Banner
+        - News Board
+            - Announcements
+            - Latests Posts
+            - Statistics
+                - Post Counts
+                - Thread Counts
+                - Member Counts
+                - Character Counts
+                - Faction Listing
+                    - Faction Name
+                    - Faction Member Count
+                - Newest Member
+                - Newest Character
+        - Navigation
+    - Forums:
+        - Forum Description
+        - Sub-Forums
+        - Forum Post Count
+        - Forum Thread Count
+        - Forum Latest Post:
+            - Thread Name + Link
+            - Author
+            - Date Posted
+    - Footer
+
+    - View Forum
+
+    - View Sub-Forum
+
+    - View Thread List
+
+    - View Thread
+
+    - Create Thread
+        - (Optional) Multi-Select:
+            - Roll Dice
+            - Immediate NPC Encounter
+        - (Optional) Set Up Shop:
+            - Select Inventory Items for trade
+
+    - Create Reply
+        - Show Case Shop: Based on if a user within thread has set up shop... only one shop per thread.
+            - Select interested shop items (optional)
+            - Select inventory items to trade (optional)
+        - Show Case Interested Items: If Shop Owner
+            - Approve
+                - Accept trade items for x
+            - Deny
+                - Deny trade items for x
+            - Barter
+                - Offer a different item for x interested item
+        - Optional Multi-Select:
+            - Roll Dice
+                - Rolling Prompt
+            - Immediate NPC Encounter
+
+    - View Player/Character List
+    
+    - View Player Profile
+
+    - View Character Profile
+
+    - View Faction List
+    
+    - Individual Faction Page(s)
+
+    - Guide
+
+    - Terms of Service
+
+    - Privacy Policy
+
+## DEFAULT RPG SETTINGS
+RPG Settings: 
+- Dice
+    - 1D100
+- Universal Outcomes:
+    - Critical Success: 90 - 100
+    - Sucess: 60 - 89
+    - Failure: 20 - 59
+    - Critical Failure: 1 - 19
+- Universal Forumula: 
+    - Individual Action Outcome: 
+        - Individual Action Outcome = Dice Roll Outcome +/- Character Role/Role Level +/- Character Inventory Item Bonus/Penalty
+        ------------------
+        - Determines: Critical Success / Success / Failure / Critical Failure of INDIVIDUAL(s)
+    - Interaction Outcome: 
+        - {Interaction Outcome} = 50 + (Action 1 Outcome - Action 2 Outcome / 2)
+        ------------------
+        - Determines: Critical Success / Success / Failure / Critical Failure of INTERACTION
+    - Final Resolution:
+            Displays: 
+                - Individual Action Outcome(s)
+                - Interaction Outcome
+- Statistics:
+    - Base:
+        - Health: 
+            - Value: 100
+            - Player Adjustable: No
+            - Regenerable: Yes
+                - Regeneration Rate: 10 / Days
+        - Energy:
+            - Value: 100
+            - Player Adjustable: No
+            - Regenerable: Yes
+                - Regeneration Rate: 5 / Days
+        - Sanity
+            - Value: 100
+            - Player Adjustable: No
+            - Regenerable: Yes
+                - Regeneration Rate: 10 / Days
+        - Magic
+            - Value: 100
+            - Player Adjustable: No
+            - Regenerable: Yes
+                - Regeneration Rate: 15 / Days
+    - Strength
+        - Value: 0
+        - Player Adjustable: Yes
+        - Regenerable: No
+    - Dexterity
+        - Value: 0
+        - Player Adjustable: Yes
+        - Regenerable: No
+    - Stealth
+        - Value: 0
+        - Player Adjustable: Yes
+        - Regenerable: No
+    - Intelligence
+        - Value: 0
+        - Player Adjustable: Yes
+        - Regenerable: No
+    - Charisma
+        - Value: 0
+        - Player Adjustable: Yes
+        - Regenerable: No
+- Actions:
+    - Attack:
+        - Multipliers:
+            - Critical Success:
+                - Health: .95
+                - Energy: .75
+            - Success:
+                - Health: .75
+                - Energy: .5
+            - Failure
+                - Health: -.75
+                - Energy: -.5
+            - Critical Failure:
+                - Health: -.95
+                - Energy: -.75
+    - Defend:
+        - Multipliers:
+            - Critical Success:
+                - Health: .95
+                - Energy: .75
+            - Success:
+                - Health: .75
+                - Energy: .5
+            - Failure
+                - Health: -.75
+                - Energy: -.5
+            - Critical Failure:
+                - Health: -.95
+                - Energy: -.75
+    - Evade:
+        - Multipliers:
+            - Critical Success:
+                - Health: .95
+                - Energy: .75
+            - Success:
+                - Health: .75
+                - Energy: .5
+            - Failure
+                - Health: -.75
+                - Energy: -.5
+            - Critical Failure:
+                - Health: -.95
+                - Energy: -.75
+
+- Action Targets:
+    - Self
+    - Character
+    - NPC
+    - Enviornment
+        
+Character Roles:
+- Leader
+    - Bonuses:
+        - +10 Charisma
+        - +5 Intelligence
+        - +5 Health
+    - Penalties:
+        - -5 Stealth
+- Warrior:
+    - Bonuses:
+        - +15 Health
+        - +10 Strength
+        - -5 Dexterity
+    - Penalties:
+- Paladin
+    - Bonuses:
+        - +15 Health
+        - +10 Strength
+        - +10 Magic
+        - +5 Charisma
+    - Penalties:
+- Monk
+    - Bonuses:
+        - +15 Dexterity
+        - +10 Intelligence
+        - +5 Health
+    - Penalties:
+        - -5 Strength
+- Sorcerer
+    - Bonuses:
+        - +25 Magic
+        - +10 Intelligence
+    - Penalties:
+        - -10 Health
+        - -5 Strength
+- Cleric
+    - Bonuses:
+        - +20 Magic
+        - +10 Intelligence
+        - +5 Stealth
+    - Penalties:
+- Merchant:
+    - Bonuses:
+        - +15 Charisma
+        - +5 Intelligence
+    - Penalties:
+        - -5 Strength
+- Bard
+    - Bonuses:
+        - +20 Charisma
+        - +10 Magic
+        - +5 Dexterity
+    - Penalties:
+        - -5 Strength
+- Civilian:
+    - Bonuses:
+        - +5 Intelligence
+        - +5 Charisma
+    - Penalties:
+- Druid
+    - Bonuses:
+        - +20 Magic
+        - +10 Intelligence
+        - +5 Stealth
+    - Penalties:
+- Ranger
+    - Bonuses:
+        - +15 Dexterity
+        - +15 stealth
+        - +10 Strength
+    - Penalties:
+- Hunter
+    - Bonuses:
+        - +10 Dexterity
+        - +10 Stealth
+        - +5 Strength
+- Hermit
+    - Bonuses:
+        - +10 Intelligence
+        - +10 Magic
+    - Penalties:
+        - -5 Charisma
+- Rogue 
+    - Bonuses:
+        - +20 Stealth
+        - +15 Dexterity
+        - +5 Charisma
+    - Penalties:
+        - -10 Health
