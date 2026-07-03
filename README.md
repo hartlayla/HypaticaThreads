@@ -1,7 +1,7 @@
-# DREAM BOARDS
-**Dream Boards** is a customizable, open sourced, forum-based web software that utilizes Discord's oAuth2 authentication and developer application features. It's creation is intended for those interested in hosting forum-based RPGs.
+# HYPATICA THREADS
+**HYPATICA THREADS** is a customizable, open sourced, forum-based web software that utilizes Discord's oAuth2 authentication and developer application features. It's creation is intended for those interested in hosting forum-based RPGs.
 
-Dream Boards utilizes discord developer application feature through a bot dubbed **Dream Bot**. Administrators must have a dedicated discord server for their RPG to allow Dream Boards to properly function.
+HYPATICA THREADS utilizes discord developer application feature through an adjacent discord bot. Administrators must have a dedicated discord server for their RPG to allow Dream Boards to properly function.
 
 ## INSTRUCTIONS
 
