@@ -1,30 +1,23 @@
 # HYPATICA THREADS
 **HYPATICA THREADS** is a customizable, open sourced, forum-based web software that utilizes Discord's oAuth2 authentication and developer application features. It's creation is intended for those interested in hosting forum-based RPGs.
 
-HYPATICA THREADS utilizes discord developer application feature through an adjacent discord bot. Administrators must have a dedicated discord server for their RPG to allow Dream Boards to properly function.
+HYPATICA THREADS utilizes discord developer application feature through an adjacent discord bot. Administrators must have a dedicated discord server for their RPG to allow HYPATICA THREADS to properly function.
 
 ## INSTRUCTIONS
 
 
 ## PAGES
-- Admin
-    - Forum Creation/Editting
-        - Forum Category
-            - Category Order
-            - Category Description
-        - Forum Boards
-            - Forum Board Order
-            - Forum Description
-    - RPG SETTINGS
-        - Universal Outcomes
+- RPG Settings:
+        - Universal Outcomes:
             - Critical Success
             - Success
             - Failure
             - Critical Failure
-        - Action Types  
-            - Create 
+        - Action Types:  
+            - Create/Edit/Delete
                 - Name
-        - Individual Actions
+                - Stat Multipliers
+        - Individual Actions:
             - Create
                 - Action Type
                 - Name
@@ -40,6 +33,14 @@ HYPATICA THREADS utilizes discord developer application feature through an adjac
             - Inventory Item DeBuff(s): Effects Character Stats
             - Inventory Item Uses
             - Inventory Item Spoil Rate (Optional)
+- Admin
+    - Forum Creation/Editting
+        - Forum Category
+            - Category Order
+            - Category Description
+        - Forum Boards
+            - Forum Board Order
+            - Forum Description
                 
     - Character Editting / Deleting
         - Faction
